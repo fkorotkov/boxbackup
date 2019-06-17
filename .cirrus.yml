@@ -1,5 +1,5 @@
 test_task:
-  container
+  container:
     matrix:
       - image: debian:jessie
       - image: debian:stretch
