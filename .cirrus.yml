@@ -21,6 +21,7 @@ debian_test_task:
     - apt-get update
     - apt-get install -y git autoconf automake gcc g++ zlib1g-dev libssl-dev libdb-dev libreadline-dev libeditline-dev make xsltproc libwww-perl libboost-dev
     - useradd -m build
+    - chown -R build: .
   <<: *standard_build
 
 freebsd_test_task:
@@ -31,4 +32,5 @@ freebsd_test_task:
     - id
     - pkg install -y git autoconf automake libxslt p5-libwww boost-libs
     - pw useradd build -m -w none
+    - chown -R build: .
   <<: *standard_build
