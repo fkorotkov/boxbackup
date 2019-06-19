@@ -14,7 +14,7 @@ debian_test_task:
     matrix:
       - image: debian:stretch
         cpu: 4
-        memory: 6
+        memory: 16G
   pre_script:
     - echo "User: $USER"
     - id
